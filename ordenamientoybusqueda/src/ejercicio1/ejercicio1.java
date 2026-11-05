@@ -11,10 +11,9 @@ package src.ejercicio1;
 public class ejercicio1 {
 						//Declaramos el metodo que se nos pide en el pdf
     public static void bubbleSort(int[] arreglo) {
-
+		int pasadas = 0; //Iniciamos el contador de las pasadas
         int comparaciones = 0;//Iniciamos variable de comparaciones
         int intercambios = 0;//Iniciamos el contador de intercambios
-        int pasadas = 0;// Pasadas completas de arrglo
         boolean intercambio;//Declaramos una variable para el intercambio de tipo boolean
 
         do {//Ciclo de mientras que donde vemos intercambio
@@ -43,7 +42,7 @@ public class ejercicio1 {
 
         } while (intercambio);
 
-        System.out.println("\nResultados:");//Imprimimos resultados 
+        System.out.println("\nResultados:-------------------------------------------");//Imprimimos resultados 
         System.out.println("Comparaciones: " + comparaciones);//comparaciones
         System.out.println("Intercambios: " + intercambios);//Intrecambios
         System.out.println("Pasadas: " + pasadas);//Pasadas
@@ -59,16 +58,16 @@ public class ejercicio1 {
 
     public static void main(String[] args) {
 
-        System.out.println("____Arreglo original____");
+        System.out.println("Arreglo original");
         int[] arreglo1 = {34, 12, 25, 8, 19};//Arregllo original del pdf 
         bubbleSort(arreglo1);
 
-        System.out.println("\n____Arreglo ya ordenado____");
+        System.out.println("\nArreglo ya ordenado");
         int[] arreglo2 = {8, 12, 19, 25, 34};//El arreglo ya ordenado 
 		// Aquí solo sera hara una pasada debido a que todo ya esta en orden 
         bubbleSort(arreglo2);
 
-        System.out.println("\n____Arreglo en orden inverso____");
+        System.out.println("\nArreglo en orden inverso");
         int[] arreglo3 = {34, 25, 19, 12, 8};// Arreglo inverso para arreglarlo
         bubbleSort(arreglo3);
     }
